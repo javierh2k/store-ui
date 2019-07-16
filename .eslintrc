@@ -1,0 +1,66 @@
+extends: eslint:recommended
+
+globals:
+  _: true
+  $: true
+  jQuery: true
+  define: true
+  Backbone: true
+  jBox: true
+  ObjectId: true
+  Aviary: true
+  Intercom: true
+  Stripe: true
+  Marionette: true
+
+parserOptions:
+  ecmaVersion: 2017
+  sourceType: "module"
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    jsx: true
+settings:
+  react:
+    pragma: React
+    version: detect
+
+env:
+  es6: true
+  browser: true
+  node: true
+
+rules:
+  indent: [0, 2] # 2 spaces indentation
+  max-len: [0, 80, 4]
+  quotes: [0, "single"]
+  semi: [0, "never"]
+  no-multiple-empty-lines: [0, {"max": 1}]
+  no-undef: 2
+  no-irregular-whitespace: 0
+  no-mixed-spaces-and-tabs: 0
+  no-inner-declarations: 0
+
+  brace-style: [0, "stroustrup"]
+  comma-dangle: [0, "always-multiline"]
+  comma-style: [0, "last"]
+  computed-property-spacing: [0, "never"]
+  dot-location: [0, "property"]
+
+  one-var: [0, "never"]
+  #no-var: [2]
+  prefer-const: [0]
+  no-bitwise: [0]
+
+  object-curly-spacing: [0, "never"]
+  array-bracket-spacing: [0, "never"]
+  space-unary-ops: [0, {"words": true, "nonwords": false}]
+  keyword-spacing: [0, {"after": true}]
+  space-before-blocks: [0, "always"]
+  space-before-function-paren: [0, "never"]
+  space-in-parens: [0, "never"]
+  spaced-comment: [0, "always"]
+
+  #TO-ENABLE
+  no-redeclare: 0
+  no-console: 0
+  no-unused-vars: 0

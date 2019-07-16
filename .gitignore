@@ -1,0 +1,13 @@
+.DS_Store
+css/.main.less
+examples/private/node_modules
+scripts/node_modules
+scripts/npm-debug.log
+.idea
+.jshintrc
+node_modules/
+npm-debug.log
+selenium-debug.log
+test/unit/coverage
+test/e2e/reports
+yarn.lock

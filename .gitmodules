@@ -1,0 +1,3 @@
+[submodule "store-shared"]
+	path = store-shared
+	url = https://github.com/javierh2k/store-shared.git
