@@ -1,10 +1,16 @@
-const config = require("../config");
+
 const path = require('path')
+const appDirectory = fs.realpathSync(process.cwd())
+const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
+
+
 module.exports = {
   resolve: {
     alias: {
-      shared: path.resolve(__dirname, '../store-shared')
+      //shared: path.resolve(__dirname, '../store-shared')
+      shared: resolveApp('store-shared/'),
     },
+    extensions: ['.js', '.jsx', '.css', '.png', '.jpg', '.gif', '.jpeg'],
   },
 
   module: {

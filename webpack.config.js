@@ -2,14 +2,18 @@ const webpack =  require('webpack');
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-var libraryName = 'store';
+const fs = require('fs');
+const appDirectory = fs.realpathSync(process.cwd())
+const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
+const libraryName = 'store';
 
 module.exports = {
     entry: __dirname + '/src/index.js',
     devtool: 'source-map',
     resolve: {
         alias: {
-          shared: path.resolve(__dirname, '/store-shared')
+          //shared: path.resolve(__dirname, '/store-shared')
+          shared: resolveApp('store-shared/')
         },
       },
     output: {

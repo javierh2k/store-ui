@@ -9,19 +9,19 @@ import {
 } from '@bootstrap-styled/v4';
 
 import { Header } from './styles';
-import { math } from '../../store-shared/libs';
+import { math } from 'shared/libs';
 
 console.log(math.sum(2, 2));
+
 const ModalAnimate = ({
-    theme,
     children,
     accepted,
     title,
     isOpen,
     handleClose,
+    ...props
 }) => {
-    //  <Button color="danger" onClick={() => handleClose()}>Launch Modal</Button>
-    console.log('theme: ', theme);
+    console.log('modal:', props);
     return (
         <React.Fragment>
             <Modal isOpen={isOpen} toggle={() => handleClose()}>
